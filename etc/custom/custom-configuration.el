@@ -7,7 +7,9 @@
  '(haskell-process-type (quote ghci))
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
- '(package-selected-packages (quote (cider)))
+ '(package-selected-packages
+   (quote
+    (color-identifiers-mode flycheck rjsx-mode autopair add-node-modules-path prettier-js web-mode-edit-element cider)))
  '(sclang-auto-scroll-post-buffer t)
  '(sclang-eval-line-forward nil))
 (custom-set-faces

@@ -31,7 +31,9 @@
 ;;         M  MMMMMMMM M  M M  MMMM' .M MM  MMMMMMMM
 ;;         M  MMMMMMMM M  M M  MMP' .MM MM  MMMMMMMM
 ;;         M         M M  M M     .dMMM MM        .M
-;;         MMMMMMMMMMM MMMM MMMMMMMMMMM MMMMMMMMMMMM ")
+;;         MMMMMMMMMMM MMMM MMMMMMMMMMM MMMMMMMMMMMM
+;; ¿Emacs de vainas?
+")
 
 ;; load emacs 24's package system. Add MELPA repository.
 
@@ -242,3 +244,16 @@
 
 (message "\n\n Pack loading completed. Your Emacs is Live...\n\n")
 (put 'downcase-region 'disabled nil)
+
+
+
+;; other config
+(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+(setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
+
+(defun web-mode-init-prettier-hook ()
+  ;;(add-node-modules-path)
+  (prettier-js-mode)
+  (autopair-mode))
+
+(add-hook 'web-mode-hook  'web-mode-init-prettier-hook)
