@@ -3,6 +3,19 @@
 ;; This is where everything starts. Do you remember this place?
 ;; It remembers you...
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+(package-initialize)
+
 (setq live-ascii-art-logo ";;
 ;;     MM\"\"\"\"\"\"\"\"`M
 ;;     MM  mmmmmmmM
@@ -19,6 +32,9 @@
 ;;         M  MMMMMMMM M  M M  MMP' .MM MM  MMMMMMMM
 ;;         M         M M  M M     .dMMM MM        .M
 ;;         MMMMMMMMMMM MMMM MMMMMMMMMMM MMMMMMMMMMMM ")
+
+;; load emacs 24's package system. Add MELPA repository.
+
 
 (message (concat "\n\n" live-ascii-art-logo "\n\n"))
 
